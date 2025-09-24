@@ -5,4 +5,5 @@ resource "null_resource" "example" {
   triggers = {
     always_run = "${timestamp()}"
   }
+  depends_on = [null_resource.another_example]
 }
